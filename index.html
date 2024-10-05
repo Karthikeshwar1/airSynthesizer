@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:url" content="https://karthikeshwar1.github.io/airSynthesizer" />
+    <meta property="og:title" content="airSynthesizer" />
+    <meta
+      property="og:description"
+      content="Play a music synthesizer using hand gestures."
+    />
+    <title>noise.jake.fun</title>
+    <!-- <link rel="stylesheet" href="./app.css" /> -->
+    <link rel="apple-touch-icon" sizes="76x76" href="/icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/icon.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/icon.png" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        background: black;
+        margin: 0;
+        overflow: hidden;
+      }
+      canvas {
+        display: block;
+        height: 100%;
+        width: 100%;
+      }
+      video {
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 320px;
+        height: 240px;
+        opacity: 0.8;
+      }
+      h1 {
+        color: white;
+        cursor: pointer;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 2rem;
+        font-style: italic;
+        font-weight: bold;
+        left: 50%;
+        position: fixed;
+        text-align: center;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      
+    </style>
+    <!-- MediaPipe scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <video id="hand-video"></video>
+    <canvas id="hand-canvas"></canvas>
+    <canvas></canvas>
+    <h1>Turn the camera on, and move your hands!</h1>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
